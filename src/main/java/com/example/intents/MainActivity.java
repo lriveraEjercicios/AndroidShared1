@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText etText, etNumber;
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         //Si no existeixen, text=""
         String text = prefs.getString("text",""); //getString(R.string.no_value)
         etText.setText(text);
+
+        prefs.getInt("counter",0);
     }
 
     public void buttonGoPressed(View view) {
@@ -48,5 +51,10 @@ public class MainActivity extends AppCompatActivity {
         editor.putString("text", etText.getText().toString());
         //Faig commit (sino no guarda!)
         editor.commit();
+    }
+
+    public void buttonCounterPressed (View view){
+        int counter = prefs.getInt("counter", 0);
+        Toast.makeText(this, String.valueOf(counter), Toast.LENGTH_LONG).show();
     }
 }

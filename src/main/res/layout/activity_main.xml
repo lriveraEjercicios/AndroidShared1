@@ -41,4 +41,11 @@
             android:onClick="buttonPrefsPressed"
             android:text="Guardar a preferencies" />
     </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="12dp"
+        android:onClick="buttonCounterPressed"
+        android:text="Ver contador" />
 </LinearLayout>
