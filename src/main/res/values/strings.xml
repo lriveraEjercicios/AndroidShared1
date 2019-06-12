@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Intents</string>
+    <string name="prefs_name">PreferenciasApp</string>
+    <string name="no_value">No hay valor en el SharedPreferences</string>
+</resources>
